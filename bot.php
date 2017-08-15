@@ -1,7 +1,9 @@
 <?php
  $access_token = 'D86UN1zk8LFuqtzYFIc1hoDUfw+xQNJOnJgiEQ0PBctzywBN8i7oGKPSIKUMGrW
  c9thNxqb3tYoo373mknr1APGV1LtLtRBugBz+mUUP1tHnG7o0dSFtjkjsVJ5yUnB4wNHY2CISvFNsrJp75+bAFAdB04t89/1O/w1cDnyilFU=';
- 
+ $arrHeader = array();
+ $arrHeader[] = "Content-Type: application/json";
+ $arrHeader[] = "Authorization: Bearer {$access_token}";
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -13,11 +15,14 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+			
+			
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
+			//messengreply Question
 			$messages = [
 				'type' => 'text',
 				'text' => $text
@@ -27,7 +32,7 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages]
+				'messages' => [$messages]="สวัสดีค่ะ";
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
