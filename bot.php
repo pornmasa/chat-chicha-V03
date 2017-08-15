@@ -1,9 +1,6 @@
 <?php
  $access_token = 'D86UN1zk8LFuqtzYFIc1hoDUfw+xQNJOnJgiEQ0PBctzywBN8i7oGKPSIKUMGrW
  c9thNxqb3tYoo373mknr1APGV1LtLtRBugBz+mUUP1tHnG7o0dSFtjkjsVJ5yUnB4wNHY2CISvFNsrJp75+bAFAdB04t89/1O/w1cDnyilFU=';
- $arrHeader = array();
- $arrHeader[] = "Content-Type: application/json";
- $arrHeader[] = "Authorization: Bearer {$access_token}";
 
 // Get POST body content
 $content = file_get_contents('php://input');
