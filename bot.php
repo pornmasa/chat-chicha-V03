@@ -24,6 +24,10 @@ if (!is_null($events['events'])) {
 			
 			$messages = [
 				'type' => 'text',
+				'text' => $text
+			];
+			$messages2 = [
+				'type' => 'text',
 				'text' => $text2
 			];
 			
