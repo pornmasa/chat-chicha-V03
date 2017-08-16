@@ -24,7 +24,14 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'text',
 				'text' => 'สวัสดีค่ะ'
-				 'stickerId'=>'2'
+				 
+				
+			];
+			$messages = [
+				'type': 'sticker',
+  				'packageId': '1',
+ 				 'stickerId': '1'
+				 
 				
 			];
 			
