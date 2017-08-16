@@ -24,7 +24,7 @@ if (!is_null($events['events'])) {
 			$messages = [
 				 
 				'type' => 'text',
-				'text' => $text['a'=>'D']
+				'text' => $text='hello'
 				 
 				
 			];
