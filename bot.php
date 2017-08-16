@@ -16,16 +16,18 @@ if (!is_null($events['events'])) {
 			
 			// Get text sent
 			$text = $event['message']['text'];
-		        $text=str_replace("",$pieces[0]);
-    			$mesagesd=str_replace("",$pieces[1]);
+		        $x = str_replace("สอนบอท","", $event);
+    			$pieces = explode("|", $x);
+			$_question=str_replace("[","",$pieces[0]);
+    			$_answer=str_replace("]","",$pieces[1]);
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
 			
 			$messages = [
 				 
-				'type' => 'text',
-				'text' => $mesagesd
+				'question' => $_question,
+				'anwer' => $_answer
 				 
 				
 			];
